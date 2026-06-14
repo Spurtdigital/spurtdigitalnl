@@ -26,6 +26,50 @@
     }
 }
 
+.home-partners {
+    overflow: hidden;
+
+    .partner-slide-one {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+
+        .slick-list {
+            overflow: visible;
+        }
+
+        .slick-track {
+            display: flex !important;
+            align-items: center;
+            gap: 12px;
+        }
+
+        &.js-partner-marquee--right {
+            transform: scaleX(-1);
+
+            .partner__slide {
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    .partner__slide {
+        width: 220px;
+        margin-right: 12px;
+        border: 1px solid $gray-100;
+        border-radius: 12px;
+        background-color: $white;
+        padding: 16px 20px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 56px;
+            object-fit: contain;
+        }
+    }
+}
+
 .default-link {
     position: relative;
     display: inline-block;
@@ -54,6 +98,16 @@
 
         &:before {
             transform: scaleX(1);
+        }
+    }
+}
+
+.partner{
+    &__slide{
+        background-color: $white;
+        img{
+            height: 56px;
+            object-fit: contain;
         }
     }
 }
