@@ -1,0 +1,13 @@
+.block {
+	&-post {
+		background-color: $white;
+		border-radius: $border-radius-xl;
+		&__media {
+			padding-bottom: 72.5%;
+			border-radius: $border-radius-xl;
+		}
+		&__content {
+			padding: 20px 28px;
+		}
+	}
+}

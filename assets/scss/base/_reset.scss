@@ -1,0 +1,77 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // max-width: 100dvh;
+    overflow-x: hidden;
+    &.logged-in {
+        &:before {
+            @include font-size(11px);
+            background-color: $primary;
+            bottom: 0;
+            color: $white;
+            content: "above";
+            height: 32px;
+            letter-spacing: 0.15em;
+            line-height: 32px;
+            padding: 0 10px;
+            position: fixed;
+            right: 0;
+            text-align: center;
+            text-transform: uppercase;
+            width: auto;
+            z-index: 9999999;
+            @include media-breakpoint-down(xxl) {
+                content: "(xxl)";
+            }
+            @include media-breakpoint-down(xl) {
+                content: "(xl)";
+            }
+            @include media-breakpoint-down(lg) {
+                content: "(lg)";
+            }
+            @include media-breakpoint-down(md) {
+                content: "(md)";
+            }
+            @include media-breakpoint-down(sm) {
+                content: "(sm)";
+            }
+        }
+    }
+}
+
+.container {
+    @include media-breakpoint-down(sm) {
+        padding: 0 30px;
+    }
+    @include breakpoint-custom-down(360px) {
+        padding: 0 20px;
+    }
+}
+
+#wpadminbar {
+    clip-path: inset(0 calc(100% - 35px) 0 0);
+    @media screen and (max-width: 782px) {
+        display: none !important;
+    }
+    &:hover {
+        clip-path: unset;
+    }
+}
+
+.img-abs-center {
+    @include img-abs-center;
+    &--contain {
+        @include img-abs-center(contain, center);
+    }
+}
+.text-white{
+    &.display-1, &.display-2, &.display-3, &.display-4, &.display-5, &.display-6 {
+        strong{
+            color: $primary;
+        }
+    }
+}

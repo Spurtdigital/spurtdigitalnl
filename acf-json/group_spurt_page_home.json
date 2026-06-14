@@ -1,0 +1,97 @@
+{
+  "key": "group_spurt_page_home",
+  "title": "Page Home",
+  "fields": [
+    {
+      "key": "field_spurt_home_hero_title",
+      "label": "Hero titel",
+      "name": "home_hero_title",
+      "type": "text",
+      "instructions": "Alleen tekst. Voor vetgedrukte delen gebruik **tekst** of __tekst__."
+    },
+    {
+      "key": "field_spurt_home_hero_text",
+      "label": "Hero tekst",
+      "name": "home_hero_text",
+      "type": "textarea",
+      "rows": 4,
+      "new_lines": "br"
+    },
+    {
+      "key": "field_spurt_home_hero_btns",
+      "label": "Hero buttons",
+      "name": "home_hero_btns",
+      "type": "repeater",
+      "instructions": "Voeg 1 of 2 buttons toe voor de hero.",
+      "min": 0,
+      "max": 2,
+      "layout": "row",
+      "button_label": "Button toevoegen",
+      "sub_fields": [
+        {
+          "key": "field_spurt_home_hero_btn_link",
+          "label": "Link",
+          "name": "link",
+          "type": "link",
+          "required": 1,
+          "return_format": "array"
+        },
+        {
+          "key": "field_spurt_home_hero_btn_color",
+          "label": "Kleur",
+          "name": "color",
+          "type": "select",
+          "required": 1,
+          "choices": {
+            "primary": "Primary",
+            "secondary": "Secondary",
+            "dark": "Dark",
+            "outline-white": "Outline White",
+            "outline-primary": "Outline Primary"
+          },
+          "default_value": "primary",
+          "return_format": "value",
+          "allow_null": 0,
+          "multiple": 0,
+          "ui": 0
+        },
+        {
+          "key": "field_spurt_home_hero_btn_icon",
+          "label": "Icoon",
+          "name": "icon",
+          "type": "select",
+          "choices": {
+            "arrow-right": "Pijl rechts",
+            "phone": "Telefoon",
+            "envelope": "E-mail",
+            "play": "Play"
+          },
+          "default_value": "arrow-right",
+          "return_format": "value",
+          "allow_null": 0,
+          "multiple": 0,
+          "ui": 1
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-home.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1781308801
+}

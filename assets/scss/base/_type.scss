@@ -1,0 +1,11 @@
+.content-container {
+    p, ul, ol {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.reset-list {
+    @include reset-list;
+}

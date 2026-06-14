@@ -1,0 +1,27 @@
+.home{
+    &-hero{
+        background-color: $dark;
+        padding: 400px 0 80px 0;
+        border-radius: 0 0 40px 40px;
+        &:before{
+            height: 100%;
+            width: 220px;
+            background-color: rgba($white, 0.02);
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 30%;
+            transform: skewX(-45deg);
+        }
+        &::after    {
+            height: 100%;
+            width: 220px;
+            background-color: rgba($white, 0.02);
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 30%;
+            transform: skewX(45deg);
+        }
+    }
+}

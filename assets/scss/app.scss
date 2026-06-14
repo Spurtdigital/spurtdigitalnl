@@ -1,0 +1,30 @@
+// --- UTILS
+@import "~bootstrap/scss/functions";
+@import "utils/variables";
+@import "utils/variables-dark";
+@import "utils/functions";
+@import "utils/mixins";
+
+// --- VENDORS
+@import "~@fancyapps/ui/dist/fancybox/fancybox.css";
+@import "~slick-slider/slick/slick.scss";
+@import "~slick-slider/slick/slick-theme.scss";
+@import "vendors/bootstrap";
+
+// --- BASE
+@import "base/reset";
+@import "base/type";
+@import "base/fonts";
+
+// --- COMPONENTS
+@import "components/block";
+@import "components/buttons";
+
+// --- LAYOUT
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+@import "layout/panel";
+
+// --- PAGES
+@import "pages/home";
