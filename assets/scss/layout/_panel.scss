@@ -1,5 +1,5 @@
 .panel {
-    background-color: $primary;
+    background-color: $dark;
     height: 100vh;
     left: 0;
     opacity: 0;
@@ -8,6 +8,21 @@
     transition: opacity .3s ease, visibility .3s ease;
     visibility: hidden;
     width: 100vw;
+    &__inner{
+        padding: 140px 0 50px 0;
+  
+            ul{
+                li{
+                    a{
+                        color: $white;
+                        text-decoration: none;
+                        @include font-size(21px);
+                        font-weight: 600;
+                    }
+                }
+            }
+        
+    }
 }
 
 body.lock {

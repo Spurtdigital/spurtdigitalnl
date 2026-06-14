@@ -12,9 +12,18 @@
 		border-radius: 44px;
 		padding: 0 32px;
 		z-index: 999;
+		@include media-breakpoint-down(md) {
+			padding: 0 24px;
+		}
+		@include media-breakpoint-down(sm) {
+			padding: 0 12px 0 24px;
+		}
 		svg {
 			max-width: 158px;
 			height: 28px;
+			@include media-breakpoint-down(md) {
+				max-width: 120px;
+			}
 			path,
 			g {
 				fill: #fff;
@@ -76,37 +85,50 @@
 	}
 
 	&-btn {
+		
 		&__image {
 			height: 48px;
 			width: 48px;
 			border-radius: 24px;
 			position: relative;
 			overflow: hidden;
+				@include media-breakpoint-down(md) {
+					display: none;
+
+				}
+		}
+	}
+	&__btn{
+		display: flex;
+		@media screen and (max-width: 400px) {
+			display: none;
 		}
 	}
 }
 .nav-bar {
 	&__toggle {
 		cursor: pointer;
-		height: 28px;
+		height: 48px;
 		position: relative;
-		width: 28px;
+		width: 48px;
 		display: none;
+		background-color: $gray-900;
+		border-radius: 48px;
 		@include media-breakpoint-down(xl) {
 			display: block;
 		}
 		span {
-			background-color: $primary;
+			background-color: $white;
 			height: 2px;
 			left: 50%;
 			position: absolute;
 			top: 50%;
 			transform: translate(-50%, -50%);
 			transition: background-color 0s ease 0.3s;
-			width: 28px;
+			width: 24px;
 			&:before,
 			&:after {
-				background-color: $primary;
+				background-color: $white;
 				content: "";
 				height: 100%;
 				left: 0;

@@ -1,0 +1,36 @@
+{
+  "key": "group_spurt_single_post",
+  "title": "Single - Post",
+  "fields": [
+    {
+      "key": "field_spurt_post_leestijd",
+      "label": "Leestijd (minuten)",
+      "name": "leestijd",
+      "type": "number",
+      "instructions": "Vul het aantal minuten leestijd in.",
+      "required": 0,
+      "min": 0,
+      "step": 1,
+      "default_value": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "post"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1781448000
+}

@@ -1,8 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/manifest.js": "/js/manifest.js",
-    "/css/app.css": "/css/app.css",
     "/js/vendor.js": "/js/vendor.js",
     "/css/ajax-loader.gif": "/css/ajax-loader.gif",
-    "/images/ajax-loader.gif": "/images/ajax-loader.gif"
+    "/images/ajax-loader.gif": "/images/ajax-loader.gif",
+    "/css/app.css": "/css/app.css"
 }

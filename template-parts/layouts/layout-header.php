@@ -11,7 +11,7 @@ $header_cta_image_alt = !empty($header_cta_image['alt']) ? $header_cta_image['al
 <header class="nav">
 	<div class="container">
 		<div class="nav__wrapper d-flex justify-content-between align-items-center">
-		<div class="d-flex gap-10">
+		<div class="d-flex gap-lg-10">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="nav__logo">
 				<svg xmlns="http://www.w3.org/2000/svg" width="324.122" height="44.76" viewBox="0 0 324.122 44.76">
 					<g id="spurt_logo_letters" data-name="spurt_logo_letters" transform="translate(-44.149 -43.59)">
@@ -23,12 +23,12 @@ $header_cta_image_alt = !empty($header_cta_image['alt']) ? $header_cta_image['al
 					</g>
 				</svg>
 			</a>
-			<nav class="nav__nav">
+			<nav class="js-main-nav nav__nav">
 				<?php echo creators_hoofdmenu();?>
 			</nav>
 		</div>
-		<div>
-			<div class="d-flex align-items-center">
+		<div class="d-flex gap-1 align-items-center">
+			<div class="nav__btn">
                 <div class="nav-btn__image">
 					<img  class="img-abs-center" src="<?php echo esc_url($header_cta_image_url); ?>" alt="<?php echo esc_attr($header_cta_image_alt); ?>">
 				</div>

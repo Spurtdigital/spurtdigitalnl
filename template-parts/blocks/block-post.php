@@ -5,7 +5,17 @@
         <?php endif; ?>
     </div>
     <div class="block-post__content">
-        <h4 class="display-6"><?php the_title(); ?></h4>
+        <?php if (get_field('leestijd') || get_the_category_list(', ')) : ?>
+            <ul class="reset-list d-flex align-items-center gap-2 mb-2">
+                <?php if (get_field('leestijd')) : ?>
+                    <li><?php echo esc_html(get_field('leestijd')); ?> minuten</li>
+                <?php endif; ?>
+                <?php if (get_the_category_list(', ')) : ?>
+                    <li><?php echo wp_kses_post(get_the_category_list(', ')); ?></li>
+                <?php endif; ?>
+            </ul>
+        <?php endif; ?>
+        <h4 class="display-6 fw-semibold"><?php the_title(); ?></h4>
     </div>
     <a href="<?php the_permalink(); ?>" class="stretched-link"></a>
 </div>

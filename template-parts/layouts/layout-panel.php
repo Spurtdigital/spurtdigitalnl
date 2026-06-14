@@ -1,3 +1,5 @@
-<section class="js-panel panel">
-    <a href="#" class="js-close-panel">Sluiten</a>
+<section class="panel">
+    <div class="container">
+        <div class="js-panel panel__inner"></div>
+    </div>
 </section>

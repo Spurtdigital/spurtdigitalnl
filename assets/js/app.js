@@ -44,9 +44,7 @@ $(document).on("click", ".js-footer-toggle", function (e) {
 var replaceMenu = function () {
     if ($(window).width() < mq.xl) {
         $(".js-panel").append($(".js-main-menu"));
-        $(".js-panel").append($(".js-header-top-menu"));
     } else {
-        $(".js-header-top").append($(".js-header-top-menu"));
         $(".js-main-nav").prepend($(".js-main-menu"));
         $(".js-panel").removeClass("panel-active");
         $(".js-toggle-panel").removeClass("is-active");
