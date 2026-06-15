@@ -1,0 +1,30 @@
+.case{
+    &__title{
+        @include font-size(52px);
+        font-weight: 800;
+        color: $dark;
+        margin-bottom: 16px;
+    }
+    &__list{
+        li{
+            a{
+                  display: block;
+                    line-height: 36px;
+                    padding: 0 16px;
+                    background-color: $gray-200;
+                    color: $dark;
+                    text-decoration: none;
+                    border-radius: 999px;
+                    transition: background-color 0.2s ease, color 0.2s ease;
+                    font-size: 12px;
+            }
+        }
+    }
+    &__media{
+        // pb 57
+        padding-bottom: 57%;
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+}

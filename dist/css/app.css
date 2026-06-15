@@ -19846,3 +19846,32 @@ body.lock .panel {
   font-weight: 500;
   color: #818182;
 }
+
+.case__title {
+  font-size: calc(1.45rem + 1.8vw);
+  font-weight: 800;
+  color: #0B0E0B;
+  margin-bottom: 16px;
+}
+@media (min-width: 1600px) {
+  .case__title {
+    font-size: 3.25rem;
+  }
+}
+.case__list li a {
+  display: block;
+  line-height: 36px;
+  padding: 0 16px;
+  background-color: #e8e5db;
+  color: #0B0E0B;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 12px;
+}
+.case__media {
+  padding-bottom: 57%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
