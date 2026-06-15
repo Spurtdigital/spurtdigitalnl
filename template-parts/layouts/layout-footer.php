@@ -34,7 +34,7 @@
                         ]);
                     }
                     ?>
-                    <div class="social-media">
+                    <div class="social-media mt-lg-3 mt-2">
                         <?php spurt_social();?>
                     </div>
                 </div>

@@ -41,6 +41,24 @@ $(document).on("click", ".js-footer-toggle", function (e) {
     $nav.stop(true, true).slideToggle(220);
 });
 
+$(function () {
+    $(".faq-content").hide();
+    $(".faq-header__icon").text("+");
+
+    $(document).on("click", ".js-faq-header", function () {
+        const $header = $(this);
+        const $item = $header.closest(".faq-item");
+        const $content = $item.find(".faq-content").first();
+        const $icon = $header.find(".faq-header__icon").first();
+
+        const isActive = !$item.hasClass("is-active");
+
+        $item.toggleClass("is-active", isActive);
+        $icon.text(isActive ? "-" : "+");
+        $content.stop(true, true).slideToggle(220);
+    });
+});
+
 const initPartnerMarquee = function () {
     const $sliders = $(".js-partner-marquee");
 

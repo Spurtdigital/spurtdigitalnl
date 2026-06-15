@@ -50,6 +50,88 @@
       "name": "contact_form_shortcode",
       "type": "text",
       "instructions": "Bijv: [contact-form-7 id=\"123\" title=\"Contact\"]"
+    },
+    {
+      "key": "field_spurt_contact_form_response_text",
+      "label": "Formulier reactie tekst",
+      "name": "contact_form_response_text",
+      "type": "text",
+      "default_value": "We reageren binnen een werkdag"
+    },
+    {
+      "key": "field_spurt_contact_tab_contactgegevens",
+      "label": "Contactgegevens",
+      "name": "",
+      "type": "tab",
+      "placement": "left"
+    },
+    {
+      "key": "field_spurt_contact_phone_label",
+      "label": "Label telefoon",
+      "name": "contact_phone_label",
+      "type": "text",
+      "default_value": "Bellen"
+    },
+    {
+      "key": "field_spurt_contact_mail_label",
+      "label": "Label mail",
+      "name": "contact_mail_label",
+      "type": "text",
+      "default_value": "Mailen"
+    },
+    {
+      "key": "field_spurt_contact_whatsapp_label",
+      "label": "Label WhatsApp",
+      "name": "contact_whatsapp_label",
+      "type": "text",
+      "default_value": "Appen"
+    },
+    {
+      "key": "field_spurt_contact_tab_faq",
+      "label": "FAQ",
+      "name": "",
+      "type": "tab",
+      "placement": "left"
+    },
+    {
+      "key": "field_spurt_contact_faq_kicker",
+      "label": "FAQ kicker",
+      "name": "contact_faq_kicker",
+      "type": "text",
+      "default_value": "Veelgestelde vragen"
+    },
+    {
+      "key": "field_spurt_contact_faq_title",
+      "label": "FAQ titel",
+      "name": "contact_faq_title",
+      "type": "text",
+      "default_value": "Misschien staat je antwoord er al."
+    },
+    {
+      "key": "field_spurt_contact_faq_items",
+      "label": "FAQ items",
+      "name": "contact_faq_items",
+      "type": "repeater",
+      "layout": "block",
+      "button_label": "FAQ toevoegen",
+      "sub_fields": [
+        {
+          "key": "field_spurt_contact_faq_question",
+          "label": "Vraag",
+          "name": "question",
+          "type": "text",
+          "required": 1
+        },
+        {
+          "key": "field_spurt_contact_faq_answer",
+          "label": "Antwoord",
+          "name": "answer",
+          "type": "textarea",
+          "required": 1,
+          "rows": 4,
+          "new_lines": "br"
+        }
+      ]
     }
   ],
   "location": [
@@ -70,5 +152,5 @@
   "active": true,
   "description": "",
   "show_in_rest": 0,
-  "modified": 1781459101
+  "modified": 1781459801
 }

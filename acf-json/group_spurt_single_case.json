@@ -1,0 +1,63 @@
+{
+  "key": "group_spurt_single_case",
+  "title": "Single - Case",
+  "fields": [
+    {
+      "key": "field_spurt_case_intro_text",
+      "label": "Intro tekst",
+      "name": "case_intro_text",
+      "type": "textarea",
+      "rows": 4,
+      "new_lines": "br"
+    },
+    {
+      "key": "field_spurt_case_related_content",
+      "label": "Gerelateerde links",
+      "name": "case_related_content",
+      "type": "relationship",
+      "post_type": [
+        "page",
+        "post",
+        "diensten"
+      ],
+      "taxonomy": "",
+      "filters": [
+        "search",
+        "post_type"
+      ],
+      "elements": "",
+      "min": 0,
+      "max": 0,
+      "return_format": "object"
+    },
+    {
+      "key": "field_spurt_case_header_image",
+      "label": "Header afbeelding (optioneel)",
+      "name": "case_header_image",
+      "type": "image",
+      "instructions": "Leeg laten om de uitgelichte afbeelding te gebruiken.",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "case"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1781463001
+}

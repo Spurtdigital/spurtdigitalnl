@@ -1,0 +1,174 @@
+{
+  "key": "group_spurt_page_diensten",
+  "title": "Page Diensten",
+  "fields": [
+    {
+      "key": "field_spurt_diensten_tab_intro",
+      "label": "Intro",
+      "name": "",
+      "type": "tab",
+      "placement": "left"
+    },
+    {
+      "key": "field_spurt_diensten_intro_title",
+      "label": "Intro titel (alternatief)",
+      "name": "diensten_intro_title",
+      "type": "text",
+      "instructions": "Leeg laten om standaard paginatitel te gebruiken."
+    },
+    {
+      "key": "field_spurt_diensten_intro_text",
+      "label": "Intro tekst",
+      "name": "diensten_intro_text",
+      "type": "textarea",
+      "rows": 4,
+      "new_lines": "br"
+    },
+    {
+      "key": "field_spurt_diensten_tab_sections",
+      "label": "Secties",
+      "name": "",
+      "type": "tab",
+      "placement": "left"
+    },
+    {
+      "key": "field_spurt_diensten_sections",
+      "label": "Diensten secties",
+      "name": "diensten_sections",
+      "type": "repeater",
+      "layout": "block",
+      "button_label": "Sectie toevoegen",
+      "sub_fields": [
+        {
+          "key": "field_spurt_diensten_section_title",
+          "label": "Titel",
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "key": "field_spurt_diensten_section_text",
+          "label": "Tekst",
+          "name": "text",
+          "type": "textarea",
+          "rows": 4,
+          "new_lines": "br"
+        },
+        {
+          "key": "field_spurt_diensten_section_benefits",
+          "label": "USP lijst",
+          "name": "benefits",
+          "type": "repeater",
+          "layout": "table",
+          "button_label": "USP toevoegen",
+          "sub_fields": [
+            {
+              "key": "field_spurt_diensten_section_benefit_text",
+              "label": "Tekst",
+              "name": "text",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "key": "field_spurt_diensten_section_pills",
+          "label": "Pills",
+          "name": "pills",
+          "type": "repeater",
+          "layout": "table",
+          "button_label": "Pill toevoegen",
+          "sub_fields": [
+            {
+              "key": "field_spurt_diensten_section_pill_link",
+              "label": "Link",
+              "name": "link",
+              "type": "link",
+              "return_format": "array"
+            }
+          ]
+        },
+        {
+          "key": "field_spurt_diensten_section_button_link",
+          "label": "Button link",
+          "name": "button_link",
+          "type": "link",
+          "return_format": "array"
+        },
+        {
+          "key": "field_spurt_diensten_section_button_color",
+          "label": "Button kleur",
+          "name": "button_color",
+          "type": "select",
+          "choices": {
+            "primary": "Primary",
+            "secondary": "Secondary",
+            "dark": "Dark",
+            "outline-white": "Outline White",
+            "outline-primary": "Outline Primary"
+          },
+          "default_value": "primary",
+          "return_format": "value",
+          "allow_null": 0,
+          "multiple": 0,
+          "ui": 1
+        },
+        {
+          "key": "field_spurt_diensten_section_button_icon",
+          "label": "Button icoon",
+          "name": "button_icon",
+          "type": "select",
+          "choices": {
+            "arrow-right": "Pijl rechts",
+            "phone": "Telefoon",
+            "envelope": "E-mail",
+            "play": "Play"
+          },
+          "default_value": "arrow-right",
+          "return_format": "value",
+          "allow_null": 0,
+          "multiple": 0,
+          "ui": 1
+        },
+        {
+          "key": "field_spurt_diensten_section_stat_value",
+          "label": "Stat waarde",
+          "name": "stat_value",
+          "type": "text"
+        },
+        {
+          "key": "field_spurt_diensten_section_stat_label",
+          "label": "Stat label",
+          "name": "stat_label",
+          "type": "text"
+        },
+        {
+          "key": "field_spurt_diensten_section_image",
+          "label": "Afbeelding",
+          "name": "image",
+          "type": "image",
+          "return_format": "array",
+          "preview_size": "medium",
+          "library": "all"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-diensten.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1781461801
+}
