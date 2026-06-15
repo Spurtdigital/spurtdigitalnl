@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<section class="bg-light py-24">
+<section class="bg-light pt-24 pb-16">
     <div class="container">
         <?php while (have_posts()) : the_post(); ?>
             <div class="row justify-content-center">
@@ -43,5 +43,9 @@
         <?php endwhile; ?>
     </div>
 </section>
+
+	<?php get_template_part( 'template-parts/layouts/layout', 'builder' ); ?>
+
+
 
 <?php get_footer();?>
