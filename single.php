@@ -58,6 +58,56 @@
 
 <?php get_template_part('template-parts/layouts/layout', 'builder', ['alt' => true]); ?>
 
+<?php
+$single_post_id = get_queried_object_id();
+$related_category_ids = wp_list_pluck(get_the_category($single_post_id), 'term_id');
+
+$related_posts_args = [
+    'post_type' => 'post',
+    'posts_per_page' => 3,
+    'post__not_in' => [$single_post_id],
+    'ignore_sticky_posts' => true,
+];
+
+if (!empty($related_category_ids)) {
+    $related_posts_args['category__in'] = $related_category_ids;
+}
+
+$related_posts_query = new WP_Query($related_posts_args);
+
+if (!$related_posts_query->have_posts()) {
+    $related_posts_query = new WP_Query([
+        'post_type' => 'post',
+        'posts_per_page' => 3,
+        'post__not_in' => [$single_post_id],
+        'ignore_sticky_posts' => true,
+    ]);
+}
+?>
+
+<?php if ($related_posts_query->have_posts()) : ?>
+    <section class="single-related bg-light pb-16">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="single-related__head d-flex align-items-end justify-content-between mb-3">
+                        <h3 class="display-4 mb-0"><?php echo esc_html__('Gerelateerde berichten', 'spurtdigitalnl'); ?></h3>
+                    </div>
+
+                    <div class="js-single-related-slider single-related__slider">
+                        <?php while ($related_posts_query->have_posts()) : $related_posts_query->the_post(); ?>
+                            <div class="single-related__slide">
+                                <?php get_template_part('template-parts/blocks/block', 'post', ['alt' => true]); ?>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php wp_reset_postdata(); ?>
+<?php endif; ?>
+
 
 
 <?php get_footer(); ?>

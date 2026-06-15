@@ -132,6 +132,48 @@ const initPartnerMarquee = function () {
     });
 };
 
+const initSingleRelatedSlider = function () {
+    const $sliders = $(".js-single-related-slider");
+
+    if (!$sliders.length) {
+        return;
+    }
+
+    $sliders.each(function () {
+        const $slider = $(this);
+
+        if ($slider.hasClass("slick-initialized")) {
+            return;
+        }
+
+        $slider.slick({
+            rows: 0,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            infinite: false,
+            adaptiveHeight: false,
+            prevArrow: '<button type="button" class="slick-prev" aria-label="Previous"><i class="fa-sharp fa-light fa-arrow-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-next" aria-label="Next"><i class="fa-sharp fa-light fa-arrow-right"></i></button>',
+            responsive: [
+                {
+                    breakpoint: mq.xl,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: mq.md,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+};
+
 var replaceMenu = function () {
     if ($(window).width() < mq.xl) {
         $(".js-panel").append($(".js-main-menu"));
@@ -145,6 +187,7 @@ var replaceMenu = function () {
 
 replaceMenu();
 initPartnerMarquee();
+initSingleRelatedSlider();
 
 $(window).on("resize", function () {
     replaceMenu();

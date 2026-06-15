@@ -1,10 +1,12 @@
-<div class="block-post position-relative">
+<?php $is_alt = !empty($args['alt']); ?>
+
+<div class="block-post<?php echo $is_alt ? ' block-post--alt' : ''; ?> position-relative">
     <div class="block-post__media position-relative overflow-hidden">
         <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('medium', ['class' => 'img-abs-center', 'alt' => get_the_title()]); ?>
         <?php endif; ?>
     </div>
-    <div class="block-post__content">
+    <div class="block-post__content<?php echo $is_alt ? ' bg-light' : ''; ?>">
         <?php if (get_field('leestijd') || get_the_category_list(', ')) : ?>
             <ul class="reset-list d-flex align-items-center gap-2 mb-2">
                 <?php if (get_field('leestijd')) : ?>
