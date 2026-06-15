@@ -1,0 +1,47 @@
+{
+  "key": "group_spurt_single_dienst",
+  "title": "Single - Dienst",
+  "fields": [
+    {
+      "key": "field_spurt_dienst_title",
+      "label": "Alternatieve titel",
+      "name": "dienst_title",
+      "type": "text",
+      "instructions": "Leeg laten om de standaard titel te gebruiken. Markdown toegestaan, bijvoorbeeld **vet** of _cursief_."
+    },
+    {
+      "key": "field_spurt_dienst_intro_text",
+      "label": "Intro tekst",
+      "name": "dienst_intro_text",
+      "type": "textarea",
+      "rows": 4,
+      "new_lines": "br"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "dienst"
+      }
+    ],
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "diensten"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1781500000
+}

@@ -20091,6 +20091,40 @@ body.lock .panel {
   color: #818182;
 }
 
+.dienst-header__title {
+  font-size: calc(1.45rem + 1.8vw);
+  color: #0B0E0B;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+@media (min-width: 1600px) {
+  .dienst-header__title {
+    font-size: 3.25rem;
+  }
+}
+.dienst-header__list li a {
+  font-size: 0.75rem;
+  background-color: #e8e5db;
+  border-radius: 50rem;
+  color: #0B0E0B;
+  display: block;
+  line-height: 36px;
+  padding: 0 16px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.dienst-header__list li a:hover, .dienst-header__list li a:focus-visible {
+  background-color: #0B0E0B;
+  color: #fff;
+}
+.dienst-header__media {
+  border-radius: 12px;
+  padding-bottom: 57%;
+}
+.dienst-header__meta {
+  color: #9d9d9e;
+}
+
 .case__title {
   font-size: calc(1.45rem + 1.8vw);
   font-weight: 800;

@@ -73,3 +73,43 @@
         }
     }
 }
+
+.dienst-header {
+    &__title {
+        @include font-size(52px);
+        color: $dark;
+        font-weight: 800;
+        margin-bottom: 16px;
+    }
+
+    &__list {
+        li {
+            a {
+                @include font-size(12px);
+                background-color: $gray-200;
+                border-radius: $border-radius-pill;
+                color: $dark;
+                display: block;
+                line-height: 36px;
+                padding: 0 16px;
+                text-decoration: none;
+                transition: background-color 0.2s ease, color 0.2s ease;
+
+                &:hover,
+                &:focus-visible {
+                    background-color: $dark;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &__media {
+        border-radius: $border-radius-lg;
+        padding-bottom: 57%;
+    }
+
+    &__meta {
+        color: $gray-700;
+    }
+}
