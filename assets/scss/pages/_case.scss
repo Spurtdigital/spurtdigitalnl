@@ -25,3 +25,170 @@
         border-radius: $border-radius-lg;
     }
 }
+
+.single-header {
+    &__title {
+        @include font-size(52px);
+        color: $dark;
+        font-weight: 800;
+        margin-bottom: 16px;
+    }
+
+    &__list {
+        li {
+            a {
+                @include font-size(12px);
+                background-color: $gray-200;
+                border-radius: $border-radius-pill;
+                color: $dark;
+                display: block;
+                line-height: 36px;
+                padding: 0 16px;
+                text-decoration: none;
+                transition: background-color 0.2s ease, color 0.2s ease;
+
+                &:hover,
+                &:focus-visible {
+                    background-color: $dark;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &__meta {
+        color: $gray-700;
+    }
+
+    &__media {
+        border-radius: $border-radius-lg;
+        padding-bottom: 57%;
+    }
+}
+
+.case-nav {
+    &__card {
+        background-color: $white;
+        border: 1px solid rgba($gray-800, 0.12);
+        border-radius: $border-radius-xl;
+        color: $dark;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 172px;
+        padding: 24px;
+        position: relative;
+        text-decoration: none;
+        transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+
+        @include media-breakpoint-down(md) {
+            min-height: 148px;
+            padding: 20px;
+        }
+
+        &:hover,
+        &:focus-visible {
+            border-color: rgba($primary, 0.45);
+            transform: translateY(-3px);
+        }
+
+        &:focus-visible {
+            outline: 0;
+        }
+
+        &--previous {
+            background-color: $gray-100;
+        }
+
+        &--next {
+            background-color: $white;
+        }
+
+        &--empty {
+            background-color: $white;
+        }
+    }
+
+    &__kicker {
+        color: $green;
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        @include font-size(26px);
+        color: $dark;
+        font-weight: 700;
+        line-height: 1.2;
+        max-width: calc(100% - 74px);
+    }
+
+    &__icon {
+        align-items: center;
+        background-color: $dark;
+        border-radius: 28px;
+        bottom: 20px;
+        color: $primary;
+        display: inline-flex;
+        font-size: 18px;
+        height: 44px;
+        justify-content: center;
+        overflow: hidden;
+        position: absolute;
+        right: 20px;
+        width: 44px;
+
+        i {
+            align-items: center;
+            display: inline-flex;
+            font-size: 16px;
+            height: 100%;
+            inset: 0;
+            justify-content: center;
+            line-height: 1;
+            position: absolute;
+            transition: transform 0.32s ease;
+            width: 100%;
+        }
+    }
+
+    &__card--next .case-nav__icon i:first-child {
+        transform: translateX(0);
+    }
+
+    &__card--next .case-nav__icon i:last-child {
+        transform: translateX(44px);
+    }
+
+    &__card--next:hover .case-nav__icon i:first-child,
+    &__card--next:focus-visible .case-nav__icon i:first-child {
+        transform: translateX(-44px);
+    }
+
+    &__card--next:hover .case-nav__icon i:last-child,
+    &__card--next:focus-visible .case-nav__icon i:last-child {
+        transform: translateX(0);
+    }
+
+    &__card--previous .case-nav__icon i:first-child {
+        transform: translateX(0);
+    }
+
+    &__card--previous .case-nav__icon i:last-child {
+        transform: translateX(-44px);
+    }
+
+    &__card--previous:hover .case-nav__icon i:first-child,
+    &__card--previous:focus-visible .case-nav__icon i:first-child {
+        transform: translateX(44px);
+    }
+
+    &__card--previous:hover .case-nav__icon i:last-child,
+    &__card--previous:focus-visible .case-nav__icon i:last-child {
+        transform: translateX(0);
+    }
+}

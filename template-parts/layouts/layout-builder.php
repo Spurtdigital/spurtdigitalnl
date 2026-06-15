@@ -1,11 +1,15 @@
-<main class="builder bg-light">
+<?php
+$is_alt_builder = !empty($args['alt']);
+$builder_col_class = $is_alt_builder ? 'col-xl-7' : 'col-xl-11';
+?>
+<main class="builder bg-light <?php echo $is_alt_builder ? 'builder--alt' : ''; ?>">
 <?php if ( have_rows( 'builder' ) ) : ?>
     <?php while ( have_rows('builder' ) ) : the_row(); ?>
         <?php if ( get_row_layout() == 'textarea' ) : ?>
             <section class="builder-row">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-xl-11">
+                        <div class="<?php echo esc_attr($builder_col_class); ?>">
                             <?php if (get_sub_field('title_left')) : ?>
                                 <div class="row g-4 align-items-start">
                                     <div class="col-lg-5">
@@ -40,7 +44,7 @@
                 <section class="builder-row">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-xl-11">
+                            <div class="<?php echo esc_attr($builder_col_class); ?>">
                                 <div class="row g-3 g-lg-4">
                                     <?php foreach (get_sub_field('images') as $item) : ?>
                                         <div class="<?php echo count(get_sub_field('images')) === 1 ? 'col-lg-12' : 'col-lg-6'; ?>">
@@ -60,7 +64,7 @@
             <section class="builder-row">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-xl-11">
+                        <div class="<?php echo esc_attr($builder_col_class); ?>">
                             <div class="builder-quote position-relative">
                                 <div class="col-xl-7">
                                     <?php if (get_sub_field('quote')) : ?>
@@ -94,7 +98,7 @@
                 <section class="builder-row">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-xl-11">
+                            <div class="<?php echo esc_attr($builder_col_class); ?>">
                                 <div class="row g-lg-5 g-3 align-items-stretch builder-split">
                                     <div class="col-lg-6 <?php echo get_sub_field('image_left') ? 'order-lg-2' : ''; ?>">
                                         <div class="builder-split__content py-lg-6">
@@ -123,7 +127,7 @@
                 <section class="builder-row">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-xl-11">
+                            <div class="<?php echo esc_attr($builder_col_class); ?>">
                                 <?php if (get_sub_field('faq_kicker') || get_sub_field('faq_title')) : ?>
                                     <div class="col-xl-5 mb-lg-8 mb-4">
                                         <?php if (get_sub_field('faq_kicker')) : ?>
@@ -157,7 +161,7 @@
                 <section class="builder-row">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-xl-11">
+                            <div class="<?php echo esc_attr($builder_col_class); ?>">
                                 <div class="builder-cta position-relative text-center <?php echo esc_attr((string) (get_sub_field('cta_background') ?: get_field('builder_cta_background', 'option') ?: 'bg-dark')); ?>">
                                     <?php if (get_sub_field('cta_title') || get_field('builder_cta_title', 'option')) : ?>
                                         <h3 class="display-3 builder-cta__title"><?php echo esc_html((string) (get_sub_field('cta_title') ?: get_field('builder_cta_title', 'option'))); ?></h3>

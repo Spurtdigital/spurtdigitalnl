@@ -1,6 +1,12 @@
 .builder{
+    &--alt{
+        .builder-row{
+            padding-bottom: 60px;
+        }
+    }
     &-row{
         padding-bottom: 120px;
+        
         p{
             @include font-size(14px);
         }

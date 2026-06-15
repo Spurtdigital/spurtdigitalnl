@@ -46,6 +46,63 @@
 
 <?php get_template_part( 'template-parts/layouts/layout', 'builder' ); ?>
 
+<?php
+$previous_case = get_previous_post(false);
+$next_case = get_next_post(false);
+$case_archive_url = get_post_type_archive_link('case');
+?>
+
+<section class="bg-light pb-16">
+    <div class="container">
+        <div class="case-nav">
+            <div class="row g-2 g-lg-3">
+                <div class="col-lg-6">
+                    <?php if ($previous_case) : ?>
+                        <a class="case-nav__card case-nav__card--previous" href="<?php echo esc_url(get_permalink($previous_case)); ?>">
+                            <span class="case-nav__kicker">Vorige case</span>
+                            <span class="case-nav__title"><?php echo esc_html(get_the_title($previous_case)); ?></span>
+                            <span class="case-nav__icon" aria-hidden="true">
+                                <i class="fa-sharp fa-light fa-arrow-left"></i>
+                                <i class="fa-sharp fa-light fa-arrow-left"></i>
+                            </span>
+                        </a>
+                    <?php else : ?>
+                        <a class="case-nav__card case-nav__card--empty" href="<?php echo esc_url($case_archive_url ?: home_url('/')); ?>">
+                            <span class="case-nav__kicker">Vorige case</span>
+                            <span class="case-nav__title">Bekijk alle cases</span>
+                            <span class="case-nav__icon" aria-hidden="true">
+                                <i class="fa-sharp fa-light fa-grid-2"></i>
+                                <i class="fa-sharp fa-light fa-grid-2"></i>
+                            </span>
+                        </a>
+                    <?php endif; ?>
+                </div>
+                <div class="col-lg-6">
+                    <?php if ($next_case) : ?>
+                        <a class="case-nav__card case-nav__card--next" href="<?php echo esc_url(get_permalink($next_case)); ?>">
+                            <span class="case-nav__kicker">Volgende case</span>
+                            <span class="case-nav__title"><?php echo esc_html(get_the_title($next_case)); ?></span>
+                            <span class="case-nav__icon" aria-hidden="true">
+                                <i class="fa-sharp fa-light fa-arrow-right"></i>
+                                <i class="fa-sharp fa-light fa-arrow-right"></i>
+                            </span>
+                        </a>
+                    <?php else : ?>
+                        <a class="case-nav__card case-nav__card--empty" href="<?php echo esc_url($case_archive_url ?: home_url('/')); ?>">
+                            <span class="case-nav__kicker">Volgende case</span>
+                            <span class="case-nav__title">Bekijk alle cases</span>
+                            <span class="case-nav__icon" aria-hidden="true">
+                                <i class="fa-sharp fa-light fa-grid-2"></i>
+                                <i class="fa-sharp fa-light fa-grid-2"></i>
+                            </span>
+                        </a>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <?php get_template_part('template-parts/layouts/layout', 'partners'); ?>
 
