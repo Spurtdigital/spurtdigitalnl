@@ -1,97 +1,651 @@
 {
-  "key": "group_spurt_page_home",
-  "title": "Page Home",
-  "fields": [
-    {
-      "key": "field_spurt_home_hero_title",
-      "label": "Hero titel",
-      "name": "home_hero_title",
-      "type": "text",
-      "instructions": "Alleen tekst. Voor vetgedrukte delen gebruik **tekst** of __tekst__."
-    },
-    {
-      "key": "field_spurt_home_hero_text",
-      "label": "Hero tekst",
-      "name": "home_hero_text",
-      "type": "textarea",
-      "rows": 4,
-      "new_lines": "br"
-    },
-    {
-      "key": "field_spurt_home_hero_btns",
-      "label": "Hero buttons",
-      "name": "home_hero_btns",
-      "type": "repeater",
-      "instructions": "Voeg 1 of 2 buttons toe voor de hero.",
-      "min": 0,
-      "max": 2,
-      "layout": "row",
-      "button_label": "Button toevoegen",
-      "sub_fields": [
+    "key": "group_spurt_page_home",
+    "title": "Page Home",
+    "fields": [
         {
-          "key": "field_spurt_home_hero_btn_link",
-          "label": "Link",
-          "name": "link",
-          "type": "link",
-          "required": 1,
-          "return_format": "array"
+            "key": "field_spurt_home_tab_hero",
+            "label": "Hero",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
         },
         {
-          "key": "field_spurt_home_hero_btn_color",
-          "label": "Kleur",
-          "name": "color",
-          "type": "select",
-          "required": 1,
-          "choices": {
-            "primary": "Primary",
-            "secondary": "Secondary",
-            "dark": "Dark",
-            "outline-white": "Outline White",
-            "outline-primary": "Outline Primary"
-          },
-          "default_value": "primary",
-          "return_format": "value",
-          "allow_null": 0,
-          "multiple": 0,
-          "ui": 0
+            "key": "field_spurt_home_hero_title",
+            "label": "Hero titel",
+            "name": "home_hero_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Alleen tekst. Voor vetgedrukte delen gebruik **tekst** of __tekst__.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-          "key": "field_spurt_home_hero_btn_icon",
-          "label": "Icoon",
-          "name": "icon",
-          "type": "select",
-          "choices": {
-            "arrow-right": "Pijl rechts",
-            "phone": "Telefoon",
-            "envelope": "E-mail",
-            "play": "Play"
-          },
-          "default_value": "arrow-right",
-          "return_format": "value",
-          "allow_null": 0,
-          "multiple": 0,
-          "ui": 1
+            "key": "field_spurt_home_hero_text",
+            "label": "Hero tekst",
+            "name": "home_hero_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 4,
+            "new_lines": "br",
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_spurt_home_hero_btns",
+            "label": "Hero buttons",
+            "name": "home_hero_btns",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Voeg 1 of 2 buttons toe voor de hero.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 2,
+            "layout": "row",
+            "button_label": "Button toevoegen",
+            "rows_per_page": 20,
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_spurt_home_hero_btn_link",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_spurt_home_hero_btns"
+                },
+                {
+                    "key": "field_spurt_home_hero_btn_color",
+                    "label": "Kleur",
+                    "name": "color",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "primary": "Primary",
+                        "secondary": "Secondary",
+                        "dark": "Dark",
+                        "outline-white": "Outline White",
+                        "outline-primary": "Outline Primary"
+                    },
+                    "default_value": "primary",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "create_options": 0,
+                    "save_options": 0,
+                    "parent_repeater": "field_spurt_home_hero_btns"
+                },
+                {
+                    "key": "field_spurt_home_hero_btn_icon",
+                    "label": "Icoon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "arrow-right": "Pijl rechts",
+                        "phone": "Telefoon",
+                        "envelope": "E-mail",
+                        "play": "Play"
+                    },
+                    "default_value": "arrow-right",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "create_options": 0,
+                    "save_options": 0,
+                    "parent_repeater": "field_spurt_home_hero_btns"
+                }
+            ]
+        },
+        {
+            "key": "field_spurt_home_tab_services",
+            "label": "Diensten",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_spurt_home_services_title",
+            "label": "Diensten titel",
+            "name": "home_services_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Voor vetgedrukte delen gebruik **tekst** of __tekst__.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_spurt_home_services_text",
+            "label": "Diensten tekst",
+            "name": "home_services_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "new_lines": "br",
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_spurt_home_services_featured_title",
+            "label": "Uitgelichte dienst titel",
+            "name": "home_services_featured_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_spurt_home_services_featured_text",
+            "label": "Uitgelichte dienst tekst",
+            "name": "home_services_featured_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 4,
+            "new_lines": "br",
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_spurt_home_services_featured_link",
+            "label": "Uitgelichte dienst link",
+            "name": "home_services_featured_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_spurt_home_services_featured_image",
+            "label": "Uitgelichte dienst afbeelding",
+            "name": "home_services_featured_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_spurt_home_services_cards",
+            "label": "Diensten kaarten",
+            "name": "home_services_cards",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "button_label": "Kaart toevoegen",
+            "min": 0,
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_spurt_home_services_card_image",
+                    "label": "Afbeelding",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": "",
+                    "parent_repeater": "field_spurt_home_services_cards"
+                },
+                {
+                    "key": "field_spurt_home_services_card_title",
+                    "label": "Titel",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_spurt_home_services_cards"
+                },
+                {
+                    "key": "field_spurt_home_services_card_text",
+                    "label": "Tekst",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 4,
+                    "new_lines": "br",
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_spurt_home_services_cards"
+                },
+                {
+                    "key": "field_spurt_home_services_card_items",
+                    "label": "Lijst links",
+                    "name": "links",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "button_label": "Link toevoegen",
+                    "min": 0,
+                    "max": 0,
+                    "rows_per_page": 20,
+                    "collapsed": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_spurt_home_services_card_item_link",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "parent_repeater": "field_spurt_home_services_card_items"
+                        }
+                    ],
+                    "parent_repeater": "field_spurt_home_services_cards"
+                },
+                {
+                    "key": "field_spurt_home_services_card_cta_link",
+                    "label": "CTA link",
+                    "name": "cta_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_spurt_home_services_cards"
+                }
+            ]
+        },
+        {
+            "key": "field_spurt_home_tab_cases",
+            "label": "Cases",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_spurt_home_cases_label",
+            "label": "Cases label",
+            "name": "home_cases_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Cases",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_spurt_home_cases_title",
+            "label": "Cases titel",
+            "name": "home_cases_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_spurt_home_cases_link",
+            "label": "Cases knop link",
+            "name": "home_cases_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_spurt_home_cases_count",
+            "label": "Aantal cases",
+            "name": "home_cases_count",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Leeg laten voor alles tonen.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "step": 1,
+            "default_value": "",
+            "max": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_spurt_home_tab_articles",
+            "label": "Artikelen",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_spurt_home_articles_title",
+            "label": "Artikelen titel",
+            "name": "home_articles_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Artikelen",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_spurt_home_articles_link",
+            "label": "Artikelen link",
+            "name": "home_articles_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_spurt_home_articles_count",
+            "label": "Aantal artikelen",
+            "name": "home_articles_count",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Leeg laten voor alles tonen.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "step": 1,
+            "default_value": "",
+            "max": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
-      ]
-    }
-  ],
-  "location": [
-    [
-      {
-        "param": "page_template",
-        "operator": "==",
-        "value": "page-home.php"
-      }
-    ]
-  ],
-  "menu_order": 0,
-  "position": "normal",
-  "style": "default",
-  "label_placement": "top",
-  "instruction_placement": "label",
-  "hide_on_screen": "",
-  "active": true,
-  "description": "",
-  "show_in_rest": 0,
-  "modified": 1781308801
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-home.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1781461614
 }

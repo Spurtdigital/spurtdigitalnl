@@ -1,0 +1,25 @@
+.contact{
+    &-item{
+        i{
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            background-color: rgba($green, 0.25);
+            color: $green;
+            text-align: center;
+            border-radius: 8px;
+        }
+        strong{
+            display: block;
+            line-height: 1;
+            display: block;
+        }
+        span{
+            line-height: 1;
+            color: $gray-800;
+            font-size: 12px;
+            display: block;
+            margin-bottom: 4px;
+        }
+    }
+}

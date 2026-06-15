@@ -75,3 +75,25 @@ body {
         }
     }
 }
+
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+        strong{
+            color: $green;
+        }
+    }
+
+form{
+    input, textarea, select{
+        background-color: $gray-100!important;
+        border-radius: 12px!important;
+    }
+    textarea{
+        min-height: 80px!important;
+        // h120px!important;
+        height: 140px;
+    }
+    label{
+        @include font-size(14px);
+        margin-bottom: 0!important;
+    }
+}

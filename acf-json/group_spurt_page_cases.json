@@ -1,0 +1,40 @@
+{
+  "key": "group_spurt_page_cases",
+  "title": "Page Cases",
+  "fields": [
+    {
+      "key": "field_spurt_cases_intro_title",
+      "label": "Intro titel (alternatief)",
+      "name": "cases_intro_title",
+      "type": "text",
+      "instructions": "Leeg laten om standaard paginatitel te gebruiken."
+    },
+    {
+      "key": "field_spurt_cases_intro_text",
+      "label": "Intro tekst",
+      "name": "cases_intro_text",
+      "type": "textarea",
+      "rows": 4,
+      "new_lines": "br"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-case.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1781458201
+}

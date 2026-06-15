@@ -8,7 +8,7 @@ $header_cta_text = !empty($header_cta_link['title']) ? $header_cta_link['title']
 $header_cta_image_url = !empty($header_cta_image['url']) ? $header_cta_image['url'] : 'https://media.licdn.com/dms/image/v2/D4E22AQGQKPQvLULf6g/feedshare-shrink_800/feedshare-shrink_800/0/1700141583585?e=2147483647&v=beta&t=HInqZzfB3pWNLx6NZiW2IydLsa5YGaXlU1v9e5efSdI';
 $header_cta_image_alt = !empty($header_cta_image['alt']) ? $header_cta_image['alt'] : '';
 ?>
-<header class="nav">
+<header class="nav nav--alt">
 	<div class="container">
 		<div class="nav__wrapper d-flex justify-content-between align-items-center">
 		<div class="d-flex gap-lg-10">

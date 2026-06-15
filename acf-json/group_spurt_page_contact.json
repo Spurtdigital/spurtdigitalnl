@@ -1,0 +1,74 @@
+{
+  "key": "group_spurt_page_contact",
+  "title": "Page - Contact",
+  "fields": [
+    {
+      "key": "field_spurt_contact_tab_intro",
+      "label": "Intro",
+      "name": "",
+      "type": "tab",
+      "placement": "left"
+    },
+    {
+      "key": "field_spurt_contact_intro_title",
+      "label": "Intro titel",
+      "name": "contact_intro_title",
+      "type": "text",
+      "instructions": "Alleen tekst. Voor vetgedrukte delen gebruik **tekst** of __tekst__. Leeg laten om paginatitel te gebruiken."
+    },
+    {
+      "key": "field_spurt_contact_intro_text",
+      "label": "Intro tekst",
+      "name": "contact_intro_text",
+      "type": "textarea",
+      "rows": 4,
+      "new_lines": "br"
+    },
+    {
+      "key": "field_spurt_contact_tab_form",
+      "label": "Formulier",
+      "name": "",
+      "type": "tab",
+      "placement": "left"
+    },
+    {
+      "key": "field_spurt_contact_form_label",
+      "label": "Formulier label",
+      "name": "contact_form_label",
+      "type": "text",
+      "default_value": "Stuur een bericht"
+    },
+    {
+      "key": "field_spurt_contact_intro_subtitle",
+      "label": "Formulier subtitel",
+      "name": "contact_intro_subtitle",
+      "type": "text"
+    },
+    {
+      "key": "field_spurt_contact_form_shortcode",
+      "label": "Formulier shortcode",
+      "name": "contact_form_shortcode",
+      "type": "text",
+      "instructions": "Bijv: [contact-form-7 id=\"123\" title=\"Contact\"]"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-contact.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1781459101
+}

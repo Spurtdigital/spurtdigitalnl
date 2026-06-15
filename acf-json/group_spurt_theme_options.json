@@ -62,6 +62,109 @@
             "return_format": "array"
         },
         {
+            "key": "field_spurt_theme_tab_partners",
+            "label": "Partners",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_spurt_partners_title",
+            "label": "Partners titel",
+            "name": "partners_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Voor vetgedrukte delen gebruik **tekst** of __tekst__.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_spurt_partners_logos",
+            "label": "Partner logos",
+            "name": "partners_logos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Logo toevoegen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_spurt_partners_logo_image",
+                    "label": "Logo afbeelding",
+                    "name": "logo_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "preview_size": "medium",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_spurt_partners_logo_link",
+                    "label": "Logo link",
+                    "name": "logo_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
             "key": "field_spurt_theme_tab_footer",
             "label": "Footer",
             "name": "",
@@ -319,5 +422,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781447161
+    "modified": 1781457301
 }
