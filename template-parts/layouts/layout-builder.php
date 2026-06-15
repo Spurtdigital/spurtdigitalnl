@@ -157,6 +157,48 @@ $builder_col_class = $is_alt_builder ? 'col-xl-7' : 'col-xl-11';
                     </div>
                 </section>
 
+            <?php elseif ( get_row_layout() == 'steps' ) : ?>
+                <?php
+                $use_custom_steps_content = (bool) get_sub_field('use_custom_steps_content');
+                $steps_items = $use_custom_steps_content ? get_sub_field('steps_items') : get_field('builder_steps_items', 'option');
+
+                if (empty($steps_items)) {
+                    $steps_items = get_field('builder_steps_items', 'option');
+                }
+                ?>
+                <section class="builder-row">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="<?php echo esc_attr($builder_col_class); ?>">
+                                <div class="builder-steps">
+                                    <div class="builder-steps__head text-center">
+                                        <?php if ($use_custom_steps_content ? get_sub_field('steps_kicker') : get_field('builder_steps_kicker', 'option')) : ?>
+                                            <span class="text-label text-primary"><?php echo esc_html((string) ($use_custom_steps_content ? get_sub_field('steps_kicker') : get_field('builder_steps_kicker', 'option'))); ?></span>
+                                        <?php endif; ?>
+                                        <?php if ($use_custom_steps_content ? get_sub_field('steps_title') : get_field('builder_steps_title', 'option')) : ?>
+                                            <h3 class="display-3 text-white"><?php echo esc_html((string) ($use_custom_steps_content ? get_sub_field('steps_title') : get_field('builder_steps_title', 'option'))); ?></h3>
+                                        <?php endif; ?>
+                                    </div>
+
+                                    <div class="row g-3 g-lg-4">
+                                        <?php if (!empty($steps_items) && is_array($steps_items)) : ?>
+                                            <?php foreach ($steps_items as $step_item) : ?>
+                                                <div class="col-lg-3 col-md-6">
+                                                    <div class="builder-steps__item">
+                                                        <span class="small text-primary"><?php echo esc_html((string) ($step_item['step_number'] ?? '')); ?></span>
+                                                        <h4 class="display-6 text-white"><?php echo esc_html((string) ($step_item['step_title'] ?? '')); ?></h4>
+                                                        <p class="builder-steps__item-text mb-0"><?php echo esc_html((string) ($step_item['step_text'] ?? '')); ?></p>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             <?php elseif ( get_row_layout() == 'cta' ) : ?>
                 <section class="builder-row">
                     <div class="container">

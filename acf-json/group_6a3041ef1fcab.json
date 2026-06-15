@@ -792,6 +792,188 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_spurt_builder_steps": {
+                    "key": "layout_spurt_builder_steps",
+                    "name": "steps",
+                    "label": "Stappen",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_spurt_builder_steps_use_custom",
+                            "label": "Lokale inhoud gebruiken",
+                            "name": "use_custom_steps_content",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Uit = globale inhoud uit Thema Opties. Aan = onderstaande velden gebruiken.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Aan",
+                            "ui_off_text": "Uit"
+                        },
+                        {
+                            "key": "field_spurt_builder_steps_kicker_local",
+                            "label": "Kicker",
+                            "name": "steps_kicker",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_spurt_builder_steps_use_custom",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_spurt_builder_steps_title_local",
+                            "label": "Titel",
+                            "name": "steps_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_spurt_builder_steps_use_custom",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_spurt_builder_steps_items_local",
+                            "label": "Stappen",
+                            "name": "steps_items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_spurt_builder_steps_use_custom",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 1,
+                            "max": 4,
+                            "layout": "row",
+                            "button_label": "Stap toevoegen",
+                            "rows_per_page": 20,
+                            "collapsed": "field_spurt_builder_steps_item_title",
+                            "sub_fields": [
+                                {
+                                    "key": "field_spurt_builder_steps_item_number",
+                                    "label": "Nummer",
+                                    "name": "step_number",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Bijv. 01",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "20",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "01",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_spurt_builder_steps_item_title",
+                                    "label": "Titel",
+                                    "name": "step_title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "40",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_spurt_builder_steps_item_text",
+                                    "label": "Tekst",
+                                    "name": "step_text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "40",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": 3,
+                                    "placeholder": "",
+                                    "new_lines": "br"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",

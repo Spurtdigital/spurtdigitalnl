@@ -121,4 +121,36 @@
             margin-right: auto;
         }
     }
+
+    &-steps {
+        background-color: $dark;
+        border-radius: 36px;
+        padding: 90px 56px 56px;
+
+        @include media-breakpoint-down(lg) {
+            border-radius: 24px;
+            padding: 64px 28px 28px;
+        }
+
+        &__head {
+            margin: 0 auto 56px;
+            max-width: 760px;
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 32px;
+            }
+        }
+
+        &__item {
+            border-top: 2px solid rgba($white, 0.15);
+            height: 100%;
+            padding-top: 24px;
+        }
+
+        &__item-text {
+            @include font-size(30px);
+            color: $gray-400;
+            line-height: 1.45;
+        }
+    }
 }
