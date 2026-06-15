@@ -14,17 +14,14 @@
                     background-color: $gray-200;
                     color: $dark;
                     text-decoration: none;
-                    border-radius: 999px;
+                    border-radius: $border-radius-pill;
                     transition: background-color 0.2s ease, color 0.2s ease;
-                    font-size: 12px;
+                    @include font-size(12px);
             }
         }
     }
     &__media{
-        // pb 57
         padding-bottom: 57%;
-        position: relative;
-        border-radius: 16px;
-        overflow: hidden;
+        border-radius: $border-radius-lg;
     }
 }

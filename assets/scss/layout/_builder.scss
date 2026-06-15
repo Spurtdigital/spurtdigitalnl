@@ -21,16 +21,15 @@
 
         &__media{
             img{
-                border-radius: 16px;
+                border-radius: $border-radius-lg;
             }
         }
     }
 
     &__media{
-        border-radius: 16px;
-        position: relative;
+        border-radius: $border-radius-lg;
         img{
-            border-radius: 16px;
+            border-radius: $border-radius-lg;
         }
         &--single{
             padding-bottom: 57%;
@@ -42,8 +41,7 @@
     &-quote{
         background-color: $dark;
         padding: 100px 48px 58px 48px;
-        position: relative;
-        border-radius: 16px;
+        border-radius: $border-radius-lg;
         &:before{
             content: '"';
             position: absolute;
@@ -51,7 +49,7 @@
             left: 40px;
             font-family: $font-family-sans-serif;
             color: $primary;
-            font-size: 90px;
+            @include font-size(90px);
         }
         &__text{
             @include font-size(32px);
@@ -62,7 +60,6 @@
         &__media{
             height: 64px;
             width: 64px;
-            position: relative;
         }
         &__author{
             @include font-size(18px);
@@ -74,12 +71,12 @@
         span{
             display: block;
             color: $gray-400;
-            font-size: 14px;
+            @include font-size(14px);
             line-height: 1;
         }
         img{
             object-fit:cover;
-            border-radius: 50%;
+            border-radius: $border-radius-pill;
         }
     }
 }

@@ -9,7 +9,7 @@ $extra_class = !empty($args['extra_class']) ? ' ' . (string) $args['extra_class'
         <?php endif; ?>
     </div>
     <div class="block-case__content">
-        <span class="block-case__label">Platform</span>
+        <span class="text-label">Platform</span>
         <h4 class="display-5 fw-semibold"><?php the_title(); ?></h4>
         <i class="fa-light fa-arrow-up-right"></i>
     </div>

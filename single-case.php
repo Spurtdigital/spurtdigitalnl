@@ -18,7 +18,7 @@
                     <p class="case__intro lead mb-lg-8"><?php echo wp_kses_post((string) get_field('case_intro_text')); ?></p>
                 </div>
                 <div class="col-xl-11">
-                    <div class="case__media position-relative">
+                    <div class="case__media position-relative overflow-hidden">
                         <?php if (has_post_thumbnail()) : ?>
                             <?php the_post_thumbnail('large', ['class' => 'img-abs-center', 'alt' => get_the_title()]); ?>
                         <?php endif; ?>

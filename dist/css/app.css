@@ -18632,6 +18632,10 @@ form label {
 .block-case:hover .block-case__media img {
   transform: scale(1.05);
 }
+.block-case:hover i {
+  background-color: #0B0E0B;
+  color: #C8F23F;
+}
 .block-case--alt .block-case__media {
   padding-bottom: 52.75%;
 }
@@ -18669,7 +18673,7 @@ form label {
   line-height: 40px;
   height: 40px;
   width: 40px;
-  border-radius: 40px;
+  border-radius: 50rem;
   background-color: #fff;
   color: #0B0E0B;
   position: absolute;
@@ -18716,7 +18720,7 @@ form label {
   line-height: 32px;
   height: 32px;
   padding: 0 12px;
-  border-radius: 24px;
+  border-radius: 50rem;
   background-color: #0B0E0B;
   color: #fff;
   text-decoration: none;
@@ -19646,14 +19650,13 @@ body.lock .panel {
   margin-bottom: 0;
 }
 .builder-split__media img {
-  border-radius: 16px;
+  border-radius: 12px;
 }
 .builder__media {
-  border-radius: 16px;
-  position: relative;
+  border-radius: 12px;
 }
 .builder__media img {
-  border-radius: 16px;
+  border-radius: 12px;
 }
 .builder__media--single {
   padding-bottom: 57%;
@@ -19664,8 +19667,7 @@ body.lock .panel {
 .builder-quote {
   background-color: #0B0E0B;
   padding: 100px 48px 58px 48px;
-  position: relative;
-  border-radius: 16px;
+  border-radius: 12px;
 }
 .builder-quote:before {
   content: '"';
@@ -19674,7 +19676,12 @@ body.lock .panel {
   left: 40px;
   font-family: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #C8F23F;
-  font-size: 90px;
+  font-size: calc(1.6875rem + 3.9375vw);
+}
+@media (min-width: 1600px) {
+  .builder-quote:before {
+    font-size: 5.625rem;
+  }
 }
 .builder-quote__text {
   font-size: calc(1.325rem + 0.675vw);
@@ -19690,7 +19697,6 @@ body.lock .panel {
 .builder-quote__media {
   height: 64px;
   width: 64px;
-  position: relative;
 }
 .builder-quote__author {
   font-size: 1.125rem;
@@ -19702,13 +19708,13 @@ body.lock .panel {
 .builder-quote span {
   display: block;
   color: #dedee0;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1;
 }
 .builder-quote img {
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 50%;
+  border-radius: 50rem;
 }
 
 .home-hero {
@@ -19867,7 +19873,7 @@ body.lock .panel {
   position: relative;
   padding-left: 16px;
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .service-row__benefits li:before {
   content: "";
@@ -19895,16 +19901,16 @@ body.lock .panel {
   background-color: #e8e5db;
   color: #0B0E0B;
   text-decoration: none;
-  border-radius: 999px;
+  border-radius: 50rem;
   transition: background-color 0.2s ease, color 0.2s ease;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .service-row__media {
   height: 100%;
   width: 100%;
 }
 .service-row__media img {
-  border-radius: 16px;
+  border-radius: 12px;
 }
 .service-row__media span {
   position: absolute;
@@ -19915,14 +19921,19 @@ body.lock .panel {
   line-height: 24px;
   z-index: 1;
   padding: 12px 16px;
-  font-size: 32px;
+  font-size: calc(1.325rem + 0.675vw);
   display: block;
-  border-radius: 12px;
+  border-radius: 4px;
   font-weight: 800;
   color: #C8F23F;
 }
+@media (min-width: 1600px) {
+  .service-row__media span {
+    font-size: 2rem;
+  }
+}
 .service-row__media span small, .service-row__media span .small {
-  font-size: 11px;
+  font-size: 0.6875rem;
   display: block;
   color: #fff;
   font-weight: 500;
@@ -19947,13 +19958,11 @@ body.lock .panel {
   background-color: #e8e5db;
   color: #0B0E0B;
   text-decoration: none;
-  border-radius: 999px;
+  border-radius: 50rem;
   transition: background-color 0.2s ease, color 0.2s ease;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .case__media {
   padding-bottom: 57%;
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
+  border-radius: 12px;
 }

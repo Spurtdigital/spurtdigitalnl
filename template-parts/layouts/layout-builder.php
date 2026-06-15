@@ -61,7 +61,7 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-11">
-                            <div class="builder-quote">
+                            <div class="builder-quote position-relative">
                                 <div class="col-xl-7">
                                     <?php if (get_sub_field('quote')) : ?>
                                         <blockquote class="builder-quote__text mb-lg-7 mb-4"><?php echo esc_html((string) get_sub_field('quote')); ?></blockquote>
@@ -69,7 +69,7 @@
                                     <?php if (get_sub_field('author') || get_sub_field('author_role') || get_sub_field('author_image')) : ?>
                                         <div class="d-flex align-items-center gap-2">
                                             <?php if (get_sub_field('author_image')) : ?>
-                                                <div class="builder-quote__media overflow-hidden">
+                                                <div class="builder-quote__media position-relative overflow-hidden">
                                                     <img class="img-abs-center" src="<?php echo esc_url((string) (get_sub_field('author_image')['url'] ?? '')); ?>" alt="<?php echo esc_attr((string) (get_sub_field('author_image')['alt'] ?? get_sub_field('author'))); ?>">
                                                 </div>
                                             <?php endif; ?>
