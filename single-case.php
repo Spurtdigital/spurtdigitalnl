@@ -44,8 +44,9 @@
     </div>
 </section>
 
-	<?php get_template_part( 'template-parts/layouts/layout', 'builder' ); ?>
+<?php get_template_part( 'template-parts/layouts/layout', 'builder' ); ?>
 
 
+<?php get_template_part('template-parts/layouts/layout', 'partners'); ?>
 
 <?php get_footer();?>

@@ -116,3 +116,31 @@
         }
     }
 }
+
+.home-cases-grid {
+    @include media-breakpoint-up(lg) {
+        .home-cases-grid__item {
+            &:nth-child(4n + 1) {
+                margin-top: 0;
+            }
+
+            &:nth-child(4n + 2) {
+                margin-top: 68px;
+            }
+
+            &:nth-child(4n + 3) {
+                margin-top: -34px;
+            }
+
+            &:nth-child(4n + 4) {
+                margin-top: 46px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .home-cases-grid__item {
+            margin-top: 0;
+        }
+    }
+}

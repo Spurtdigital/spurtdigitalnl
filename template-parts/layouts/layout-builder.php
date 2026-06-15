@@ -118,6 +118,67 @@
                         </div>
                     </div>
                 </section>
+
+            <?php elseif ( get_row_layout() == 'faq' ) : ?>
+                <section class="builder-row">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-11">
+                                <?php if (get_sub_field('faq_kicker') || get_sub_field('faq_title')) : ?>
+                                    <div class="col-xl-5 mb-lg-8 mb-4">
+                                        <?php if (get_sub_field('faq_kicker')) : ?>
+                                            <span class="text-uppercase text-green fw-semibold"><?php echo esc_html((string) get_sub_field('faq_kicker')); ?></span>
+                                        <?php endif; ?>
+                                        <?php if (get_sub_field('faq_title')) : ?>
+                                            <h4 class="display-4"><?php echo esc_html((string) get_sub_field('faq_title')); ?></h4>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (have_rows('faq_items')) : ?>
+                                    <?php while (have_rows('faq_items')) : the_row(); ?>
+                                        <div class="faq-item faq-item--alt">
+                                            <div class="js-faq-header faq-header">
+                                                <h4 class="mb-0"><?php echo esc_html((string) get_sub_field('question')); ?></h4>
+                                                <span class="faq-header__icon" aria-hidden="true">+</span>
+                                            </div>
+                                            <div class="faq-content">
+                                                <p class="mb-0 text-gray-500"><?php echo wp_kses_post((string) get_sub_field('answer')); ?></p>
+                                            </div>
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            <?php elseif ( get_row_layout() == 'cta' ) : ?>
+                <section class="builder-row">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-11">
+                                <div class="builder-cta position-relative text-center <?php echo esc_attr((string) (get_sub_field('cta_background') ?: get_field('builder_cta_background', 'option') ?: 'bg-dark')); ?>">
+                                    <?php if (get_sub_field('cta_title') || get_field('builder_cta_title', 'option')) : ?>
+                                        <h3 class="display-3 builder-cta__title"><?php echo esc_html((string) (get_sub_field('cta_title') ?: get_field('builder_cta_title', 'option'))); ?></h3>
+                                    <?php endif; ?>
+
+                                    <?php if (get_sub_field('cta_subtitle') || get_field('builder_cta_subtitle', 'option')) : ?>
+                                        <p class="builder-cta__subtitle mb-0"><?php echo wp_kses_post((string) (get_sub_field('cta_subtitle') ?: get_field('builder_cta_subtitle', 'option'))); ?></p>
+                                    <?php endif; ?>
+
+                                    <?php if ((get_sub_field('cta_button_link') || get_field('builder_cta_button_link', 'option')) && function_exists('spurt_add_btns')) : ?>
+                                        <?php spurt_add_btns([[
+                                            'link' => get_sub_field('cta_button_link') ?: get_field('builder_cta_button_link', 'option'),
+                                            'color' => (string) (get_sub_field('cta_button_color') ?: get_field('builder_cta_button_color', 'option') ?: 'primary'),
+                                            'icon' => (string) (get_sub_field('cta_button_icon') ?: get_field('builder_cta_button_icon', 'option') ?: 'arrow-right'),
+                                        ]], 'justify-content-center d-flex mt-4'); ?>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
         <?php endif; ?>
     <?php endwhile; ?>
 <?php endif; ?>

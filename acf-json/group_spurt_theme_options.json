@@ -183,6 +183,169 @@
             "selected": 0
         },
         {
+            "key": "field_spurt_theme_tab_builder",
+            "label": "Builder",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_spurt_builder_cta_title",
+            "label": "Builder CTA titel",
+            "name": "builder_cta_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Fallback voor CTA layout in content builder.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_spurt_builder_cta_subtitle",
+            "label": "Builder CTA subtitel",
+            "name": "builder_cta_subtitle",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Fallback voor CTA layout in content builder.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "new_lines": "br",
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_spurt_builder_cta_button_link",
+            "label": "Builder CTA button link",
+            "name": "builder_cta_button_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Fallback voor CTA layout in content builder.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_spurt_builder_cta_button_color",
+            "label": "Builder CTA button kleur",
+            "name": "builder_cta_button_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Fallback voor CTA layout in content builder.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "primary": "Primary",
+                "secondary": "Secondary",
+                "dark": "Dark",
+                "outline-white": "Outline White",
+                "outline-primary": "Outline Primary"
+            },
+            "default_value": "primary",
+            "return_format": "value",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_spurt_builder_cta_button_icon",
+            "label": "Builder CTA button icoon",
+            "name": "builder_cta_button_icon",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Fallback voor CTA layout in content builder.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "arrow-right": "Pijl rechts",
+                "phone": "Telefoon",
+                "envelope": "E-mail",
+                "play": "Play"
+            },
+            "default_value": "arrow-right",
+            "return_format": "value",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_spurt_builder_cta_background",
+            "label": "Builder CTA achtergrond",
+            "name": "builder_cta_background",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Fallback voor CTA layout in content builder.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-dark": "Donker",
+                "bg-white": "Wit"
+            },
+            "default_value": "bg-dark",
+            "return_format": "value",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
             "key": "field_spurt_footer_top_title",
             "label": "Footer top titel",
             "name": "footer_top_title",
@@ -422,5 +585,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781457301
+    "modified": 1781561400
 }

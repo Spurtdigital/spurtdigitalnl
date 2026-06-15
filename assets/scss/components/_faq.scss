@@ -11,6 +11,22 @@
         &:first-child:nth-last-child(2) + .faq-item {
             border-bottom: 0;
         }
+        
+            &--alt {
+                background-color: $white;
+                border: 0;
+                border-radius: 32px;
+                padding: 4px 20px;
+
+                & + .faq-item {
+                    border-top: 0;
+                    margin-top: 12px;
+                }
+
+                &:first-child:nth-last-child(2) + .faq-item {
+                    border-bottom: 0;
+                }
+            }
     }
 
     &-header {

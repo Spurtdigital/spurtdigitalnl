@@ -85,43 +85,7 @@ get_header();
 	</div>
 </section>
 
-<section class="home-partners bg-light py-xl-14 py-5">
-	<div class="container mb-lg-8">
-		<div class="col-xl-6 mx-auto text-center">
-			<h4 class="display-3"><?php echo function_exists('creators_markdown') ? creators_markdown((string) get_field('partners_title', 'option')) : wp_kses_post((string) get_field('partners_title', 'option')); ?></h4>
-		</div>
-	</div>
-	<div class="partner-slide-one js-partner-marquee js-partner-marquee--left">
-		<?php if (have_rows('partners_logos', 'option')) : ?>
-			<?php while (have_rows('partners_logos', 'option')) : the_row(); ?>
-				<div class="partner__slide">
-					<?php if (get_sub_field('logo_link')) : ?>
-						<a href="<?php echo esc_url((string) (get_sub_field('logo_link')['url'] ?? '#')); ?>" target="<?php echo esc_attr((string) (get_sub_field('logo_link')['target'] ?: '_self')); ?>">
-							<img src="<?php echo esc_url((string) (get_sub_field('logo_image')['url'] ?? '')); ?>" alt="<?php echo esc_attr((string) (get_sub_field('logo_image')['alt'] ?? '')); ?>">
-						</a>
-					<?php else : ?>
-						<img src="<?php echo esc_url((string) (get_sub_field('logo_image')['url'] ?? '')); ?>" alt="<?php echo esc_attr((string) (get_sub_field('logo_image')['alt'] ?? '')); ?>">
-					<?php endif; ?>
-				</div>
-			<?php endwhile; ?>
-		<?php endif; ?>
-	</div>
-	<div class="partner-slide-one js-partner-marquee js-partner-marquee--right">
-		<?php if (have_rows('partners_logos', 'option')) : ?>
-			<?php while (have_rows('partners_logos', 'option')) : the_row(); ?>
-				<div class="partner__slide">
-					<?php if (get_sub_field('logo_link')) : ?>
-						<a href="<?php echo esc_url((string) (get_sub_field('logo_link')['url'] ?? '#')); ?>" target="<?php echo esc_attr((string) (get_sub_field('logo_link')['target'] ?: '_self')); ?>">
-							<img src="<?php echo esc_url((string) (get_sub_field('logo_image')['url'] ?? '')); ?>" alt="<?php echo esc_attr((string) (get_sub_field('logo_image')['alt'] ?? '')); ?>">
-						</a>
-					<?php else : ?>
-						<img src="<?php echo esc_url((string) (get_sub_field('logo_image')['url'] ?? '')); ?>" alt="<?php echo esc_attr((string) (get_sub_field('logo_image')['alt'] ?? '')); ?>">
-					<?php endif; ?>
-				</div>
-			<?php endwhile; ?>
-		<?php endif; ?>
-	</div>
-</section>
+<?php get_template_part('template-parts/layouts/layout', 'partners'); ?>
 
 <section class="bg-dark py-lg-10 py-5">
 	<div class="container">
@@ -142,13 +106,13 @@ get_header();
 				<?php endif; ?>
 			</div>
 		</div>
-		<div class="row g-3 mt-lg-4 mt-0">
+		<div class="row g-3 mt-lg-4 mt-0 home-cases-grid">
 			<?php $loop = new WP_Query( array(
 					'post_type' => 'case',
 					'posts_per_page' => get_field('home_cases_count') ? (int) get_field('home_cases_count') : -1
 				) ); 	?>
 			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-				<div class="col-lg-6">
+				<div class="col-lg-6 home-cases-grid__item">
 					<?php get_template_part( 'template-parts/blocks/block', 'case' ); ?>
 				</div>
 			<?php endwhile; wp_reset_postdata(); ?>

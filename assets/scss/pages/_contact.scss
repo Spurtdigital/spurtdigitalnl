@@ -8,6 +8,7 @@
             color: $green;
             text-align: center;
             border-radius: 8px;
+            transition: background-color 0.28s ease, color 0.28s ease, transform 0.28s ease;
         }
         strong{
             display: block;
@@ -22,9 +23,16 @@
             margin-bottom: 4px;
         }
        a{
-         text-decoration: none;
+        text-decoration: none;
         color: $dark;
        }
+
+        &:hover i,
+        &:focus-within i {
+            background-color: $dark;
+            color: $primary;
+            transform: translateY(-1px) scale(1.03);
+        }
     }
 }
 

@@ -79,4 +79,40 @@
             border-radius: $border-radius-pill;
         }
     }
+
+    &-cta{
+        border-radius: $border-radius-lg;
+        padding: 80px 48px;
+
+        &.bg-dark {
+            background-color: $dark;
+
+            .builder-cta__title {
+                color: $white;
+            }
+
+            .builder-cta__subtitle {
+                color: $gray-400;
+            }
+        }
+
+        &.bg-white {
+            background-color: $white;
+
+            .builder-cta__title {
+                color: $dark;
+            }
+
+            .builder-cta__subtitle {
+                color: $gray-800;
+            }
+        }
+
+        &__subtitle{
+            @include font-size(18px);
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }

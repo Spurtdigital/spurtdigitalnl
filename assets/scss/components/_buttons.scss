@@ -299,4 +299,19 @@
       }
     }
   }
+
+  &.btn-dark {
+    .btn-icon__icon {
+      background-color: $primary;
+      color: $dark;
+    }
+
+    &:hover,
+    &:focus-visible {
+      .btn-icon__icon {
+        background-color: $primary;
+        color: $dark;
+      }
+    }
+  }
 }
