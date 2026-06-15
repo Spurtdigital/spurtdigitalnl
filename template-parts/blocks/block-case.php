@@ -11,7 +11,10 @@ $extra_class = !empty($args['extra_class']) ? ' ' . (string) $args['extra_class'
     <div class="block-case__content">
         <span class="text-label">Platform</span>
         <h4 class="display-5 fw-semibold"><?php the_title(); ?></h4>
-        <i class="fa-light fa-arrow-up-right"></i>
+        <span class="block-case__icon" aria-hidden="true">
+            <i class="fa-light fa-arrow-up-right"></i>
+            <i class="fa-light fa-arrow-up-right"></i>
+        </span>
     </div>
     <a href="<?php the_permalink(); ?>" class="stretched-link"></a>
 </div>
