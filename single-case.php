@@ -15,7 +15,7 @@
                         </ul>
                     <?php endif; ?>
                     <h1 class="case__title"><?php echo esc_html(get_the_title()); ?></h1>
-                    <p class="case__intro lead mb-lg-4"><?php echo wp_kses_post((string) get_field('case_intro_text')); ?></p>
+                    <p class="case__intro lead mb-lg-8"><?php echo wp_kses_post((string) get_field('case_intro_text')); ?></p>
                 </div>
                 <div class="col-xl-11">
                     <div class="case__media position-relative">
